@@ -7,6 +7,7 @@ interface ProjectModule {
 		category: string;
 		thumbnail: ProjectMedia;
 		media: ProjectMedia[];
+		description?: string;
 	};
 	default: unknown;
 }
@@ -16,7 +17,7 @@ export async function getProjects(): Promise<Project[]> {
 
 	const projects: Project[] = Object.entries(modules).map(([path, module]) => {
 		const slug = path.split('/').pop()?.replace('.md', '') ?? '';
-		const { title, date, category, thumbnail, media } = module.metadata;
+		const { title, date, category, thumbnail, media, description } = module.metadata;
 
 		return {
 			slug,
@@ -24,7 +25,8 @@ export async function getProjects(): Promise<Project[]> {
 			date,
 			category,
 			thumbnail,
-			media
+			media,
+			description
 		};
 	});
 
