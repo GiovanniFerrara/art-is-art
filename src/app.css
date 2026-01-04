@@ -31,8 +31,25 @@ body {
 		Cantarell,
 		sans-serif;
 	line-height: 1.5;
-	background: #fafafa;
-	color: #1a1a1a;
+	background: var(--bg);
+	color: var(--text);
+	transition: background 0.3s ease, color 0.3s ease;
+}
+
+:root {
+	--bg: #0a0a0a;
+	--text: #e5e5e5;
+	--text-muted: #888;
+	--card-bg: #151515;
+	--card-shadow: rgba(0, 0, 0, 0.3);
+}
+
+:root.light {
+	--bg: #fafafa;
+	--text: #1a1a1a;
+	--text-muted: #666;
+	--card-bg: #ffffff;
+	--card-shadow: rgba(0, 0, 0, 0.08);
 }
 
 img,

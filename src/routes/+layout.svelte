@@ -2,6 +2,7 @@
 	import '../app.css';
 	import favicon from '$lib/assets/favicon.svg';
 	import BubbleOverlay from '$lib/components/BubbleOverlay.svelte';
+	import ThemeToggle from '$lib/components/ThemeToggle.svelte';
 
 	let { children } = $props();
 </script>
@@ -12,6 +13,7 @@
 </svelte:head>
 
 <BubbleOverlay />
+<ThemeToggle />
 
 <main>
 	{@render children()}

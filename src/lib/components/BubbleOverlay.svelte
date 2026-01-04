@@ -5,8 +5,18 @@
   let isHovering = $state(false);
   let mouseX = 0.5;
   let mouseY = 0.5;
+  let isDarkTheme = $state(true);
 
   onMount(() => {
+    // Watch for theme changes
+    const observer = new MutationObserver(() => {
+      isDarkTheme = !document.documentElement.classList.contains("light");
+    });
+    observer.observe(document.documentElement, {
+      attributes: true,
+      attributeFilter: ["class"],
+    });
+
     const gl = canvas.getContext("webgl2") || canvas.getContext("webgl");
     if (!gl) {
       console.error("WebGL not supported");
@@ -32,6 +42,7 @@
 			uniform vec2 u_resolution;
 			uniform vec2 u_mouse;
 			uniform float u_hover;
+			uniform float u_isDark;
 
 			#define PI 3.14159265359
 
@@ -139,7 +150,7 @@
 				vec2 mouseDir = mouseDist > 0.001 ? normalize(mouseOffset) : vec2(0.0);
 
 				// Displacement radius and strength
-				float displaceRadius = 0.25 * u_hover;
+				float displaceRadius = 0.1 * u_hover;
 				float displaceStrength = smoothstep(displaceRadius, 0.0, mouseDist);
 
 				// Push the film outward - thins in center, thickens at rim
@@ -192,12 +203,12 @@
 					alpha = max(alpha, rippleAlpha * 0.6);
 				}
 
-				// Small dark center dot
+				// Center dot - white on dark theme, black on light theme
 				float dotRadius = 0.00475;
 				float dot = smoothstep(dotRadius, dotRadius * 0.3, mouseDist);
-				vec3 dotColor = vec3(0.15, 0.15, 0.18);
-				color = mix(color, dotColor, dot * u_hover * 0.85);
-				alpha = max(alpha, dot * u_hover * 0.75);
+				vec3 dotColor = mix(vec3(0.0), vec3(1.0), u_isDark);
+				color = mix(color, dotColor, dot * u_hover * 0.9);
+				alpha = max(alpha, dot * u_hover * 0.85);
 
 				gl_FragColor = vec4(color, alpha);
 			}
@@ -250,6 +261,7 @@
     const resolutionLoc = gl.getUniformLocation(program, "u_resolution");
     const mouseLoc = gl.getUniformLocation(program, "u_mouse");
     const hoverLoc = gl.getUniformLocation(program, "u_hover");
+    const isDarkLoc = gl.getUniformLocation(program, "u_isDark");
 
     gl.enable(gl.BLEND);
     gl.blendFunc(gl.SRC_ALPHA, gl.ONE_MINUS_SRC_ALPHA);
@@ -284,6 +296,7 @@
       gl.uniform2f(resolutionLoc, canvas.width, canvas.height);
       gl.uniform2f(mouseLoc, mouseX, 1.0 - mouseY);
       gl.uniform1f(hoverLoc, currentHover);
+      gl.uniform1f(isDarkLoc, isDarkTheme ? 1.0 : 0.0);
 
       gl.drawArrays(gl.TRIANGLE_STRIP, 0, 4);
 
@@ -312,6 +325,7 @@
       window.removeEventListener("resize", resize);
       document.removeEventListener("mousemove", handleMouseMove);
       document.removeEventListener("mouseleave", handleMouseLeave);
+      observer.disconnect();
     };
   });
 </script>
