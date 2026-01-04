@@ -6,6 +6,7 @@
   let mouseX = 0.5;
   let mouseY = 0.5;
   let isDarkTheme = $state(true);
+  let scrollY = 0;
 
   onMount(() => {
     // Watch for theme changes
@@ -43,6 +44,7 @@
 			uniform vec2 u_mouse;
 			uniform float u_hover;
 			uniform float u_isDark;
+			uniform float u_scroll;
 
 			#define PI 3.14159265359
 
@@ -103,23 +105,27 @@
 				vec2 uv = v_uv;
 				vec2 aspect = vec2(u_resolution.x / u_resolution.y, 1.0);
 
+				// Offset UV by scroll position (wave pattern moves with page)
+				vec2 scrollOffset = vec2(0.0, -u_scroll);
+				vec2 waveUV = uv + scrollOffset;
+
 				// Time-based animation with multiple frequencies for organic feel
 				float t1 = u_time * 0.15;
 				float t2 = u_time * 0.23;
 				float t3 = u_time * 0.17;
 
-				// Create flowing noise field for thickness variation
-				float noise1 = snoise(uv * 2.0 + vec2(t1, t2 * 0.7)) * 0.5;
-				float noise2 = snoise(uv * 4.0 - vec2(t2 * 0.8, t1)) * 0.25;
-				float noise3 = snoise(uv * 8.0 + vec2(t3, -t1 * 0.5)) * 0.125;
+				// Create flowing noise field for thickness variation (uses scrolled UV)
+				float noise1 = snoise(waveUV * 2.0 + vec2(t1, t2 * 0.7)) * 0.5;
+				float noise2 = snoise(waveUV * 4.0 - vec2(t2 * 0.8, t1)) * 0.25;
+				float noise3 = snoise(waveUV * 8.0 + vec2(t3, -t1 * 0.5)) * 0.125;
 
 				// Combine for film thickness
 				float thickness = 0.5 + noise1 + noise2 + noise3;
 
-				// Add wave ripples
-				float wave1 = sin(uv.x * 6.0 + uv.y * 4.0 + t1 * 2.0) * 0.1;
-				float wave2 = sin(uv.x * 8.0 - uv.y * 6.0 + t2 * 1.5) * 0.08;
-				float wave3 = sin(length((uv - 0.5) * aspect) * 12.0 - u_time * 0.5) * 0.06;
+				// Add wave ripples (uses scrolled UV)
+				float wave1 = sin(waveUV.x * 6.0 + waveUV.y * 4.0 + t1 * 2.0) * 0.1;
+				float wave2 = sin(waveUV.x * 8.0 - waveUV.y * 6.0 + t2 * 1.5) * 0.08;
+				float wave3 = sin(length((waveUV - 0.5) * aspect) * 12.0 - u_time * 0.5) * 0.06;
 
 				thickness += wave1 + wave2 + wave3;
 
@@ -262,6 +268,7 @@
     const mouseLoc = gl.getUniformLocation(program, "u_mouse");
     const hoverLoc = gl.getUniformLocation(program, "u_hover");
     const isDarkLoc = gl.getUniformLocation(program, "u_isDark");
+    const scrollLoc = gl.getUniformLocation(program, "u_scroll");
 
     gl.enable(gl.BLEND);
     gl.blendFunc(gl.SRC_ALPHA, gl.ONE_MINUS_SRC_ALPHA);
@@ -271,6 +278,9 @@
     let currentHover = 0;
 
     function resize() {
+      if (!gl) {
+        return;
+      }
       const dpr = Math.min(window.devicePixelRatio, 2);
       canvas.width = window.innerWidth * dpr;
       canvas.height = window.innerHeight * dpr;
@@ -278,6 +288,9 @@
     }
 
     function render() {
+      if (!gl) {
+        return;
+      }
       const time = (performance.now() - startTime) / 1000;
 
       // Smooth hover transition
@@ -297,6 +310,7 @@
       gl.uniform2f(mouseLoc, mouseX, 1.0 - mouseY);
       gl.uniform1f(hoverLoc, currentHover);
       gl.uniform1f(isDarkLoc, isDarkTheme ? 1.0 : 0.0);
+      gl.uniform1f(scrollLoc, scrollY);
 
       gl.drawArrays(gl.TRIANGLE_STRIP, 0, 4);
 
@@ -313,7 +327,12 @@
       isHovering = false;
     }
 
+    function handleScroll() {
+      scrollY = window.scrollY / window.innerHeight;
+    }
+
     window.addEventListener("resize", resize);
+    window.addEventListener("scroll", handleScroll, { passive: true });
     document.addEventListener("mousemove", handleMouseMove);
     document.addEventListener("mouseleave", handleMouseLeave);
 
@@ -323,6 +342,7 @@
     return () => {
       cancelAnimationFrame(animationId);
       window.removeEventListener("resize", resize);
+      window.removeEventListener("scroll", handleScroll);
       document.removeEventListener("mousemove", handleMouseMove);
       document.removeEventListener("mouseleave", handleMouseLeave);
       observer.disconnect();

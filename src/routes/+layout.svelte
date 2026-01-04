@@ -1,28 +1,34 @@
 <script lang="ts">
-	import '../app.css';
-	import favicon from '$lib/assets/favicon.svg';
-	import BubbleOverlay from '$lib/components/BubbleOverlay.svelte';
-	import ThemeToggle from '$lib/components/ThemeToggle.svelte';
+  import "../app.css";
+  import favicon from "$lib/assets/favicon.svg";
+  import BubbleOverlay from "$lib/components/BubbleOverlay.svelte";
+  import ThemeToggle from "$lib/components/ThemeToggle.svelte";
+  import Nav from "$lib/components/Nav.svelte";
+  import Footer from "$lib/components/Footer.svelte";
 
-	let { children } = $props();
+  let { children } = $props();
 </script>
 
 <svelte:head>
-	<link rel="icon" href={favicon} />
-	<title>art is art</title>
+  <link rel="icon" href={favicon} />
+  <title>gian marco ferrara</title>
 </svelte:head>
 
 <BubbleOverlay />
 <ThemeToggle />
 
+<Nav />
+
 <main>
-	{@render children()}
+  {@render children()}
 </main>
 
+<Footer />
+
 <style>
-	main {
-		min-height: 100vh;
-		position: relative;
-		z-index: 1;
-	}
+  main {
+    min-height: 100vh;
+    position: relative;
+    z-index: 1;
+  }
 </style>
