@@ -6,9 +6,11 @@ interface ProjectModule {
 		title: string;
 		date: string;
 		category: string;
+		medium?: string;
 		thumbnail: ProjectMedia;
 		media: ProjectMedia[];
 		description?: string;
+		shortDescription?: string;
 	};
 	default: unknown;
 }
@@ -23,8 +25,8 @@ export async function getProjects(locale: Locale = defaultLocale): Promise<Proje
 	Object.entries(modules).forEach(([path, module]) => {
 		if (!path.includes(`/content/${defaultLocale}/projects/`)) return;
 		const slug = path.split('/').pop()?.replace('.md', '') ?? '';
-		const { title, date, category, thumbnail, media, description } = module.metadata;
-		projectMap.set(slug, { slug, title, date, category, thumbnail, media, description });
+		const { title, date, category, medium, thumbnail, media, description, shortDescription } = module.metadata;
+		projectMap.set(slug, { slug, title, date, category, medium, thumbnail, media, description, shortDescription });
 	});
 
 	// Then override with locale-specific versions if they exist
@@ -32,8 +34,8 @@ export async function getProjects(locale: Locale = defaultLocale): Promise<Proje
 		Object.entries(modules).forEach(([path, module]) => {
 			if (!path.includes(`/content/${locale}/projects/`)) return;
 			const slug = path.split('/').pop()?.replace('.md', '') ?? '';
-			const { title, date, category, thumbnail, media, description } = module.metadata;
-			projectMap.set(slug, { slug, title, date, category, thumbnail, media, description });
+			const { title, date, category, medium, thumbnail, media, description, shortDescription } = module.metadata;
+			projectMap.set(slug, { slug, title, date, category, medium, thumbnail, media, description, shortDescription });
 		});
 	}
 

@@ -2,6 +2,9 @@
 title: Robots
 date: 2025-01-04
 category: art numérique
+medium: Installation Vidéo, Robotique
+shortDescription: >-
+  Une exploration de la conscience mécanique à travers des systèmes autonomes—questionnant où se termine le comportement programmé et où commence l'identité émergente.
 description: >-
   L'installation est centrée sur un Roomba modifié—un appareil conçu à l'origine pour la consommation machinale de débris—reconverti ici pour la consommation d'images. Naviguant dans l'espace de la galerie, la machine exécute le rituel par excellence du visiteur de musée contemporain : la documentation compulsive du soi dans l'espace de l'art.
 

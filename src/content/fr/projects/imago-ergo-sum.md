@@ -2,6 +2,9 @@
 title: Imago Ergo Sum
 date: 2026-01-07
 category: art numérique
+medium: Rover Autonome, IA, Intégration Réseaux Sociaux
+shortDescription: >-
+  Un Roomba modifié navigue dans l'espace de la galerie, se documentant compulsivement parmi les œuvres d'art et sélectionnant autonomement ses images « favorites » à publier sur les réseaux sociaux—révélant à quel point nos propres rituels esthétiques sont devenus algorithmiques.
 description: >-
   L'installation est centrée sur un Roomba modifié—un appareil conçu à l'origine pour la consommation machinale de débris—reconverti ici pour la consommation d'images. Naviguant dans l'espace de la galerie, la machine exécute le rituel par excellence du visiteur de musée contemporain : la documentation compulsive du soi dans l'espace de l'art.
 

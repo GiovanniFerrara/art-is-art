@@ -10,7 +10,9 @@ export interface Project {
 	title: string;
 	date: string;
 	category: string;
+	medium?: string;
 	thumbnail: ProjectMedia;
 	media: ProjectMedia[];
 	description?: string;
+	shortDescription?: string;
 }
