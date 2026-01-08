@@ -1,6 +1,6 @@
 ---
-title: Robots
-date: 2025-01-04
+title: Imago Ergo Sum
+date: 2026-01-07
 category: digital art
 description: >-
   The installation centers on a modified Roomba—a device originally designed for the mindless consumption of debris—repurposed here for the consumption of images. Navigating the gallery space, the machine performs the quintessential ritual of the contemporary museum visitor: the compulsive documentation of the self within the space of art.
@@ -9,9 +9,11 @@ description: >-
 
   The work suggests that the act of "liking" and "posting" has become so procedural, so devoid of true contemplation, that it can be seamlessly performed by a vacuum cleaner. The robot is not mimicking us; it is revealing that we have become robotic. In reducing the profound act of witnessing art to a routine automated event, the piece asks: Is our digital identity a proof of life, or merely a programmed loop of data validation?
 thumbnail:
-  type: video
-  src: /videos/robots.mp4
+  type: image
+  src: /images/projects/imago-ergo-sum/imago.png
+  alt: Imago Ergo Sum thumbnail
 media:
-  - type: video
-    src: /videos/robots.mp4
+  - type: image
+    src: /images/projects/imago-ergo-sum/imago.png
+    alt: Imago Ergo Sum
 ---
