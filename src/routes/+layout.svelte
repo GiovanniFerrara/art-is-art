@@ -6,7 +6,7 @@
   import Nav from "$lib/components/Nav.svelte";
   import Footer from "$lib/components/Footer.svelte";
 
-  let { children } = $props();
+  let { children, data } = $props();
 </script>
 
 <svelte:head>
@@ -17,7 +17,7 @@
 <BubbleOverlay />
 <ThemeToggle />
 
-<Nav />
+<Nav locale={data.locale} />
 
 <main>
   {@render children()}
