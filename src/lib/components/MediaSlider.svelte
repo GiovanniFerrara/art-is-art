@@ -48,15 +48,26 @@
 		{#each media as item, i}
 			<div class="slide">
 				{#if item.type === 'video'}
-					<video
-						bind:this={videoEls[i]}
-						src={item.src}
-						poster={item.poster}
-						muted
-						loop
-						playsinline
-						preload="metadata"
-					></video>
+					{#if item.src.includes('youtube.com/embed')}
+						<iframe
+							src="{item.src}?controls=0&showinfo=0&rel=0&modestbranding=1"
+							title="YouTube video player"
+							frameborder="0"
+							allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+							referrerpolicy="strict-origin-when-cross-origin"
+							allowfullscreen
+						></iframe>
+					{:else}
+						<video
+							bind:this={videoEls[i]}
+							src={item.src}
+							poster={item.poster}
+							controls
+							loop
+							playsinline
+							preload="metadata"
+						></video>
+					{/if}
 				{:else}
 					<img src={item.src} alt={item.alt ?? `${title} - ${i + 1}`} loading="lazy" />
 				{/if}
@@ -99,7 +110,6 @@
 		width: 100%;
 		height: 100%;
 		overflow: hidden;
-		background: var(--card-bg);
 	}
 
 	.slides {
@@ -118,10 +128,17 @@
 	}
 
 	.slide img,
-	.slide video {
+	.slide video,
+	.slide iframe {
 		max-width: 100%;
 		max-height: 100%;
 		object-fit: contain;
+	}
+
+	.slide iframe {
+		width: 100%;
+		aspect-ratio: 16 / 9;
+		border: none;
 	}
 
 	.nav-btn {
@@ -167,8 +184,9 @@
 	}
 
 	.dot {
-		width: 6px;
-		height: 6px;
+		width: 8px;
+		height: 8px;
+		padding: 0;
 		border-radius: 50%;
 		border: none;
 		background: var(--text-muted);
