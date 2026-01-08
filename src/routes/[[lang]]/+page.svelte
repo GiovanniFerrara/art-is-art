@@ -3,13 +3,19 @@
   import type { Project } from "$lib/types";
 
   let { data } = $props();
-  let selectedProject: Project = $state(data.projects[0]);
+  let selectedSlug = $state(data.projects[0]?.slug);
   let isDescriptionExpanded = $state(false);
+
+  // Derived: get the current project from data.projects based on slug
+  // This ensures the project updates when language changes
+  let selectedProject: Project = $derived(
+    data.projects.find((p) => p.slug === selectedSlug) ?? data.projects[0]
+  );
 
   const MAX_SHORT_LENGTH = 300;
 
   function selectProject(project: Project) {
-    selectedProject = project;
+    selectedSlug = project.slug;
     isDescriptionExpanded = false;
   }
 

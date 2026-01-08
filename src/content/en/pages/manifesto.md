@@ -12,7 +12,7 @@ Art is a question asked in a language we're still learning to speak.
 
 ## what I believe
 
-**Imperfection is honesty.** The crack in the glaze, the tremor in the line, the pause before the word—these are not failures. They are proof of presence.
+**Imperfection is honesty.** The crack in the glaze, the tremor in the line, the pause before the word-these are not failures. They are proof of presence.
 
 **Slowness is resistance.** In a world optimized for speed, choosing to take time is a radical act. I refuse to create at the pace of consumption.
 

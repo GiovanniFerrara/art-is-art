@@ -8,7 +8,7 @@ I'm Gian Marco Ferrara, a multidisciplinary creative working at the intersection
 
 ## background
 
-Born with an insatiable curiosity for how things work and why they look the way they do. My practice spans digital art, visual design, and experimental media—always searching for that moment where craft meets meaning.
+Born with an insatiable curiosity for how things work and why they look the way they do. My practice spans digital art, visual design, and experimental media-always searching for that moment where craft meets meaning.
 
 ## process
 

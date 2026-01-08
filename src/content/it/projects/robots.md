@@ -2,8 +2,11 @@
 title: Robots
 date: 2025-01-04
 category: arte digitale
+medium: Installazione Video, Robotica
+shortDescription: >-
+  Un'esplorazione della coscienza meccanica attraverso sistemi autonomi-interrogando dove finisce il comportamento programmato e dove inizia l'identità emergente.
 description: >-
-  L'installazione si concentra su un Roomba modificato—un dispositivo originariamente progettato per il consumo meccanico di detriti—qui riconvertito per il consumo di immagini. Navigando lo spazio della galleria, la macchina esegue il rituale per eccellenza del visitatore contemporaneo di musei: la documentazione compulsiva del sé nello spazio dell'arte.
+  L'installazione si concentra su un Roomba modificato-un dispositivo originariamente progettato per il consumo meccanico di detriti-qui riconvertito per il consumo di immagini. Navigando lo spazio della galleria, la macchina esegue il rituale per eccellenza del visitatore contemporaneo di musei: la documentazione compulsiva del sé nello spazio dell'arte.
 
   La macchina non si limita a registrare; esercita il "gusto". Selezionando autonomamente un'immagine "preferita" dalla sua galleria per trasmetterla sui social media, il dispositivo sfida la sacralità del giudizio estetico umano. Se un algoritmo di pulizia può possedere una preferenza, può "curare" un feed e validare un momento attraverso la pubblicazione, esso espone la scomoda verità del nostro comportamento.
 
