@@ -4,9 +4,9 @@ date: 2026-01-07
 category: art numérique
 medium: Rover Autonome, IA, Intégration Réseaux Sociaux
 shortDescription: >-
-  Un Roomba modifié navigue dans l'espace de la galerie, se documentant compulsivement parmi les œuvres d'art et sélectionnant autonomement ses images « favorites » à publier sur les réseaux sociaux-révélant à quel point nos propres rituels esthétiques sont devenus algorithmiques.
+  Un Roomba modifié navigue dans l'espace de la galerie, se documentant compulsivement parmi les œuvres d'art et sélectionnant autonomement ses images « favorites » à publier sur les réseaux sociaux - révélant à quel point nos propres rituels esthétiques sont devenus algorithmiques.
 description: >-
-  L'installation est centrée sur un Roomba modifié-un appareil conçu à l'origine pour la consommation machinale de débris-reconverti ici pour la consommation d'images. Naviguant dans l'espace de la galerie, la machine exécute le rituel par excellence du visiteur de musée contemporain : la documentation compulsive du soi dans l'espace de l'art.
+  L'installation est centrée sur un Roomba modifié - un appareil conçu à l'origine pour la consommation machinale de débris-reconverti ici pour la consommation d'images. Naviguant dans l'espace de la galerie, la machine exécute le rituel par excellence du visiteur de musée contemporain : la documentation compulsive du soi dans l'espace de l'art.
 
   La machine ne se contente pas d'enregistrer ; elle exerce le « goût ». En sélectionnant de manière autonome une image « favorite » de sa galerie pour la diffuser sur les réseaux sociaux, l'appareil remet en question la sacralité du jugement esthétique humain. Si un algorithme de nettoyage peut posséder une préférence, peut « curatier » un fil d'actualité et valider un moment par la publication, il expose la vérité inconfortable de notre propre comportement.
 
