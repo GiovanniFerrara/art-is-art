@@ -59,7 +59,7 @@
 		justify-content: center;
 		transition: color 0.2s ease, opacity 0.2s ease;
 		opacity: 0.5;
-		z-index: 100;
+		z-index: 1002;
 	}
 
 	.theme-toggle:hover {

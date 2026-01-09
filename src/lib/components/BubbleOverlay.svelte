@@ -5,6 +5,8 @@
   let isHovering = $state(false);
   let mouseX = 0.5;
   let mouseY = 0.5;
+  let cursorX = $state(0);
+  let cursorY = $state(0);
   let isDarkTheme = $state(true);
   let scrollY = 0;
 
@@ -209,12 +211,7 @@
 					alpha = max(alpha, rippleAlpha * 0.6);
 				}
 
-				// Center dot - white on dark theme, black on light theme
-				float dotRadius = 0.00475;
-				float dot = smoothstep(dotRadius, dotRadius * 0.3, mouseDist);
-				vec3 dotColor = mix(vec3(0.0), vec3(1.0), u_isDark);
-				color = mix(color, dotColor, dot * u_hover * 0.9);
-				alpha = max(alpha, dot * u_hover * 0.85);
+				// Cursor dot rendered as HTML element for z-index flexibility
 
 				gl_FragColor = vec4(color, alpha);
 			}
@@ -320,6 +317,8 @@
     function handleMouseMove(e: MouseEvent) {
       mouseX = e.clientX / window.innerWidth;
       mouseY = e.clientY / window.innerHeight;
+      cursorX = e.clientX;
+      cursorY = e.clientY;
       isHovering = true;
     }
 
@@ -352,6 +351,13 @@
 
 <canvas bind:this={canvas} class="bubble-overlay" aria-hidden="true"></canvas>
 
+<div
+  class="cursor-dot"
+  class:visible={isHovering}
+  style="transform: translate({cursorX}px, {cursorY}px)"
+  aria-hidden="true"
+></div>
+
 <style>
   .bubble-overlay {
     position: fixed;
@@ -359,6 +365,32 @@
     width: 100%;
     height: 100%;
     pointer-events: none;
-    z-index: 1000;
+    z-index: 0;
+  }
+
+  .cursor-dot {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 6px;
+    height: 6px;
+    margin-left: -3px;
+    margin-top: -3px;
+    border-radius: 50%;
+    background: var(--text);
+    pointer-events: none;
+    z-index: 9999;
+    opacity: 0;
+    transition: opacity 0.08s ease;
+    will-change: transform;
+    box-shadow: 0 0 3px 1px rgba(255, 255, 255, 0.15);
+  }
+
+  :global(:root.light) .cursor-dot {
+    box-shadow: 0 0 3px 1px rgba(0, 0, 0, 0.1);
+  }
+
+  .cursor-dot.visible {
+    opacity: 0.85;
   }
 </style>

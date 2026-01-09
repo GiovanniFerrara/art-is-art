@@ -17,6 +17,9 @@ thumbnail:
   alt: Imago Ergo Sum thumbnail
 media:
   - type: image
+    src: /images/projects/imago-ergo-sum/imago2.png
+    alt: Imago Ergo Sum
+  - type: image
     src: /images/projects/imago-ergo-sum/imago.png
     alt: Imago Ergo Sum
 ---

@@ -10,21 +10,17 @@
 	let currentIndex = $state(0);
 	let sliderEl: HTMLElement;
 	let videoEls: (HTMLVideoElement | null)[] = $state([]);
+	let isPlaying: boolean[] = $state([]);
 
 	function goTo(index: number) {
 		// Pause current video if playing
 		const currentMedia = media[currentIndex];
 		if (currentMedia.type === 'video' && videoEls[currentIndex]) {
 			videoEls[currentIndex]?.pause();
+			isPlaying[currentIndex] = false;
 		}
 
 		currentIndex = index;
-
-		// Auto-play video when navigating to it
-		const newMedia = media[index];
-		if (newMedia.type === 'video' && videoEls[index]) {
-			videoEls[index]?.play();
-		}
 	}
 
 	function next() {
@@ -38,6 +34,23 @@
 	function handleKeydown(e: KeyboardEvent) {
 		if (e.key === 'ArrowRight') next();
 		if (e.key === 'ArrowLeft') prev();
+	}
+
+	function togglePlay(index: number) {
+		const video = videoEls[index];
+		if (!video) return;
+
+		if (video.paused) {
+			video.play();
+			isPlaying[index] = true;
+		} else {
+			video.pause();
+			isPlaying[index] = false;
+		}
+	}
+
+	function handleVideoEnded(index: number) {
+		isPlaying[index] = false;
 	}
 </script>
 
@@ -58,15 +71,34 @@
 							allowfullscreen
 						></iframe>
 					{:else}
-						<video
-							bind:this={videoEls[i]}
-							src={item.src}
-							poster={item.poster}
-							controls
-							loop
-							playsinline
-							preload="metadata"
-						></video>
+						<div class="video-container">
+							<video
+								bind:this={videoEls[i]}
+								src={item.src}
+								poster={item.poster}
+								loop
+								playsinline
+								preload="metadata"
+								onended={() => handleVideoEnded(i)}
+							></video>
+							<button
+								class="play-btn"
+								class:playing={isPlaying[i]}
+								onclick={() => togglePlay(i)}
+								aria-label={isPlaying[i] ? 'Pause' : 'Play'}
+							>
+								{#if isPlaying[i]}
+									<svg viewBox="0 0 24 24" fill="currentColor">
+										<rect x="6" y="4" width="4" height="16" rx="1" />
+										<rect x="14" y="4" width="4" height="16" rx="1" />
+									</svg>
+								{:else}
+									<svg viewBox="0 0 24 24" fill="currentColor">
+										<path d="M8 5.14v14.72a1 1 0 001.5.86l11-7.36a1 1 0 000-1.72l-11-7.36a1 1 0 00-1.5.86z" />
+									</svg>
+								{/if}
+							</button>
+						</div>
 					{/if}
 				{:else}
 					<img src={item.src} alt={item.alt ?? `${title} - ${i + 1}`} loading="lazy" />
@@ -139,6 +171,67 @@
 		width: 100%;
 		aspect-ratio: 16 / 9;
 		border: none;
+	}
+
+	.video-container {
+		position: relative;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 100%;
+		height: 100%;
+	}
+
+	.video-container video {
+		max-width: 100%;
+		max-height: 100%;
+		object-fit: contain;
+	}
+
+	.play-btn {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		width: 5rem;
+		height: 5rem;
+		border: 1px solid rgba(255, 255, 255, 0.3);
+		border-radius: 50%;
+		background: rgba(0, 0, 0, 0.4);
+		backdrop-filter: blur(8px);
+		color: rgba(255, 255, 255, 0.9);
+		cursor: none;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+		opacity: 1;
+	}
+
+	.play-btn:hover {
+		background: rgba(0, 0, 0, 0.6);
+		border-color: rgba(255, 255, 255, 0.5);
+		transform: translate(-50%, -50%) scale(1.05);
+	}
+
+	.play-btn.playing {
+		opacity: 0;
+		pointer-events: none;
+	}
+
+	.video-container:hover .play-btn.playing {
+		opacity: 1;
+		pointer-events: auto;
+	}
+
+	.play-btn svg {
+		width: 1.75rem;
+		height: 1.75rem;
+		margin-left: 0.2rem;
+	}
+
+	.play-btn.playing svg {
+		margin-left: 0;
 	}
 
 	.nav-btn {

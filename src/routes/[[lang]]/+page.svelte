@@ -102,6 +102,7 @@
     flex: 1;
     min-width: 0;
     min-height: 50vh;
+    padding: 0 1.5rem;
   }
 
   .sidebar {
@@ -243,6 +244,7 @@
     .viewer {
       order: 1;
       min-height: auto;
+      padding: 0 2rem;
     }
 
     .sidebar {
