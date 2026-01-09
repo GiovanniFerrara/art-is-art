@@ -17,4 +17,5 @@ thumbnail:
 media:
   - type: video
     src: /videos/robots.mp4
+    caption: /images/projects/automata/automata.png
 ---

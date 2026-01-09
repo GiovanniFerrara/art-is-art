@@ -103,6 +103,11 @@
 				{:else}
 					<img src={item.src} alt={item.alt ?? `${title} - ${i + 1}`} loading="lazy" />
 				{/if}
+				{#if item.caption}
+					<figure class="caption" class:hidden={isPlaying[i]}>
+						<img src={item.caption} alt="Caption" />
+					</figure>
+				{/if}
 			</div>
 		{/each}
 	</div>
@@ -206,6 +211,7 @@
 		justify-content: center;
 		transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 		opacity: 1;
+		z-index: 10;
 	}
 
 	.play-btn:hover {
@@ -299,5 +305,25 @@
 		font-size: 0.75rem;
 		color: var(--text-muted);
 		letter-spacing: 0.1em;
+	}
+
+	.caption {
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		margin: 0;
+		transition: opacity 0.3s ease;
+	}
+
+	.caption.hidden {
+		opacity: 0;
+		pointer-events: none;
+	}
+
+	.caption img {
+		width: 100%;
+		height: auto;
+		display: block;
 	}
 </style>

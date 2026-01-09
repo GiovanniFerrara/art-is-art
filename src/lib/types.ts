@@ -3,6 +3,7 @@ export interface ProjectMedia {
 	src: string;
 	alt?: string;
 	poster?: string; // for videos
+	caption?: string;
 }
 
 export interface Project {
