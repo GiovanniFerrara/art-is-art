@@ -1,6 +1,6 @@
 ---
 title: Imago Ergo Sum
-date: 2026-01-07
+date: 2024-01-07
 category: arte digitale
 medium: Rover Autonomo, IA, Integrazione Social Media
 shortDescription: >-

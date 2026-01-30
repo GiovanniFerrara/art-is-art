@@ -4,16 +4,16 @@ title: About
 
 # about
 
-I'm Gian Marco Ferrara, a multidisciplinary creative working at the intersection of art, design, and technology.
+Mi chiamo Gian Marco Ferrara, 
 
-## background
+La mia passione per la creazione e per la transformazione si é manifestata in diversi ambiti ed evoluta conseguentemente: dal progettare strutture in cemento armato, al progettare sistemi di informatica; dalle piccole produzioni di birra a piccole produzioni di vino naturale siciliano; dal creare delle solide radici con la Sicilia al creare relazioni umane a Varsavia ed infine a Parigi.
 
-Born with an insatiable curiosity for how things work and why they look the way they do. My practice spans digital art, visual design, and experimental media-always searching for that moment where craft meets meaning.
+# medium
 
-## process
+Chi sostiene che l'universo virtuale non giochi un ruolo primario nella nostra vita mente. 
+Passiamo tantissimo tempo nel mondo delle cose virtuali; quelle ben progettate ci fanno venire voglia di passarcene ancora  di piú, proprio come il design e l'archiettura nel mondo reale.
+Il mio medium é quindi principalmente quello del creatore divino che immagina una realtá sempre simbolica e politica e la fa divenire realtá facendola scontrare con l'esperienza quotidiana.
 
-I believe in slow work. In sitting with an idea until it reveals itself. Every project begins with observation, moves through experimentation, and arrives somewhere unexpected. The journey matters as much as the destination.
+# topics
 
-## currently
-
-Based in the space between screens and sketchbooks. When not creating, I'm probably walking somewhere without a destination, reading something tangential, or staring at light.
+Sono profondamente affascinato dal concetto di automata, dal quel breve istante di assoluta libertá che '
