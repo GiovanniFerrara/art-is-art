@@ -30,9 +30,6 @@
     <a href={href("/about")} class:active={isActive("/about")}
       >{t(locale, "nav.about")}</a
     >
-    <a href={href("/manifesto")} class:active={isActive("/manifesto")}
-      >{t(locale, "nav.manifesto")}</a
-    >
     <a href={href("/contact")} class:active={isActive("/contact")}
       >{t(locale, "nav.contact")}</a
     >

@@ -1,13 +1,13 @@
 ---
 title: Contact
-email: hello@gianmarcoferrara.com
+email: gianmarco.ferrara@gmail.com
 social:
   - platform: Instagram
-    url: https://instagram.com/gianmarcoferrara
+    url: https://www.instagram.com/granciro/
   - platform: LinkedIn
-    url: https://linkedin.com/in/gianmarcoferrara
+    url: https://www.linkedin.com/in/giovanni-marco-ferrara/
   - platform: GitHub
-    url: https://github.com/gianmarcoferrara
+    url: https://github.com/giovanniFerrara/
 ---
 
 # contact

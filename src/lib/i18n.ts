@@ -12,19 +12,16 @@ export const ui: Record<Locale, Record<string, string>> = {
 	en: {
 		'nav.work': 'work',
 		'nav.about': 'about',
-		'nav.manifesto': 'manifesto',
 		'nav.contact': 'contact'
 	},
 	fr: {
 		'nav.work': 'travaux',
 		'nav.about': 'à propos',
-		'nav.manifesto': 'manifeste',
 		'nav.contact': 'contact'
 	},
 	it: {
 		'nav.work': 'lavori',
 		'nav.about': 'chi sono',
-		'nav.manifesto': 'manifesto',
 		'nav.contact': 'contatti'
 	}
 };

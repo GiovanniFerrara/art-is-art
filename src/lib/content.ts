@@ -7,7 +7,7 @@ interface PageModule {
 }
 
 export async function getPageContent(
-	page: 'about' | 'manifesto' | 'contact',
+	page: 'about' | 'contact',
 	locale: Locale = defaultLocale
 ): Promise<{
 	metadata: Record<string, unknown>;
