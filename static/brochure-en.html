@@ -7,6 +7,17 @@
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap');
 
+        @page {
+            size: A4;
+            margin: 1.5cm;
+            margin-top: 0;
+            margin-bottom: 0;
+        }
+
+        @page :first {
+            margin-top: 1.5cm;
+        }
+
         * {
             margin: 0;
             padding: 0;
@@ -17,45 +28,44 @@
             font-family: 'Space Mono', monospace;
             background: #fff;
             color: #000;
-            min-height: 100vh;
-            padding: 3rem;
+            padding: 2rem;
             max-width: 800px;
             margin: 0 auto;
         }
 
         .title {
-            font-size: 2.5rem;
+            font-size: 2rem;
             font-weight: 700;
-            margin-bottom: 0.5rem;
+            margin-bottom: 0.3rem;
             letter-spacing: -0.02em;
         }
 
         .subtitle {
-            font-size: 0.9rem;
+            font-size: 0.75rem;
             color: #666;
-            margin-bottom: 3rem;
+            margin-bottom: 1.5rem;
             text-transform: uppercase;
             letter-spacing: 0.1em;
         }
 
         .description {
-            font-size: 1rem;
-            line-height: 1.8;
-            margin-bottom: 2rem;
+            font-size: 0.8rem;
+            line-height: 1.6;
+            margin-bottom: 1.2rem;
         }
 
         .description p {
-            margin-bottom: 1.5rem;
+            margin-bottom: 0.8rem;
         }
 
         .instagram-link {
             display: inline-block;
-            font-size: 0.9rem;
+            font-size: 0.75rem;
             color: #000;
             text-decoration: none;
             border: 1px solid #000;
-            padding: 0.5rem 1rem;
-            margin-bottom: 4rem;
+            padding: 0.4rem 0.8rem;
+            margin-bottom: 1.5rem;
             transition: all 0.2s;
         }
 
@@ -64,47 +74,66 @@
             color: #fff;
         }
 
-        .divider {
-            width: 40px;
-            height: 1px;
-            background: #000;
-            margin: 4rem 0;
-        }
-
         .bio-section {
-            border-top: 1px solid #eee;
-            padding-top: 3rem;
+            border-top: 1px solid #ddd;
+            padding-top: 1.2rem;
         }
 
         .bio-name {
-            font-size: 1.2rem;
+            font-size: 0.95rem;
             font-weight: 700;
-            margin-bottom: 1rem;
+            margin-bottom: 0.5rem;
             letter-spacing: 0.05em;
         }
 
         .bio-tagline {
-            font-size: 0.85rem;
+            font-size: 0.7rem;
             color: #666;
-            margin-bottom: 1.5rem;
+            margin-bottom: 0.8rem;
         }
 
         .bio-text {
-            font-size: 0.9rem;
-            line-height: 1.7;
-            margin-bottom: 1rem;
+            font-size: 0.75rem;
+            line-height: 1.6;
+            margin-bottom: 0.6rem;
         }
 
         .bio-instagram {
-            font-size: 0.85rem;
+            font-size: 0.7rem;
             color: #000;
             text-decoration: none;
             border-bottom: 1px solid #000;
         }
 
+        .separator {
+            color: #999;
+            margin: 0 0.3rem;
+        }
+
+        .qr-section {
+            margin-top: 1rem;
+        }
+
+        .qr-code {
+            width: 60px;
+            height: 60px;
+        }
+
         @media print {
             body {
-                padding: 2cm;
+                padding: 0;
+                max-width: 100%;
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+            }
+
+            .instagram-link {
+                border: 1px solid #000 !important;
+            }
+
+            .instagram-link:hover {
+                background: transparent;
+                color: #000;
             }
         }
     </style>
@@ -112,7 +141,7 @@
 <body>
     <header>
         <h1 class="title">@I Also Like Art</h1>
-        <p class="subtitle">Autonomous Rover / AI Vision / Social Media Integration</p>
+        <p class="subtitle">Autonomous Rover / AI / Social Media</p>
     </header>
 
     <main>
@@ -137,6 +166,12 @@
             <p class="bio-text">In engineering, noise is the enemy. In art, noise is the message. He builds systems designed to behave according to their true dark machine nature—the glitch reveals what we've been trained not to see.</p>
 
             <a href="https://instagram.com/granciro" class="bio-instagram" target="_blank">instagram.com/granciro</a>
+            <span class="separator"> · </span>
+            <a href="https://gmferrara.net" class="bio-instagram" target="_blank">gmferrara.net</a>
+
+            <div class="qr-section">
+                <img src="https://api.qrserver.com/v1/create-qr-code/?size=80x80&data=https://gmferrara.net" alt="QR Code" class="qr-code" />
+            </div>
         </section>
     </main>
 </body>
