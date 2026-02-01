@@ -1,16 +1,20 @@
 ---
 title: Automata
 date: 2025-01-04
-category: digital art
-medium: Video Installation, Robotics
+category: installation
+medium: Robotic Sculpture, AI Choreography, Generative Audio
 shortDescription: >-
   An exploration of mechanical consciousness through autonomous systems-questioning where programmed behavior ends and emergent identity begins.
 description: >-
-  The installation centers on a modified Roomba-a device originally designed for the mindless consumption of debris-repurposed here for the consumption of images. Navigating the gallery space, the machine performs the quintessential ritual of the contemporary museum visitor: the compulsive documentation of the self within the space of art.
+  In a darkened arena, two sculptural robots face each other. One red, one blue. They cannot speak with words, only with gesture-the lifting of an arm, the rotation of a wrist, the opening of a hand. They dance.
 
-  The machine does not merely record; it exercises "taste." By autonomously selecting a "favorite" image from its gallery to broadcast on social media, the device challenges the sanctity of human aesthetic judgment. If a cleaning algorithm can possess a preference, can "curate" a feed, and validate a moment through publication, it exposes the uncomfortable truth of our own behavior.
+  An AI watches through their eyes and choreographs their movements in real-time. It does not execute a script-it *perceives* through vision and *responds* through the limited vocabulary of joint articulation. Each movement generates the next. Each gesture calls forth a reply.
 
-  The work suggests that the act of "liking" and "posting" has become so procedural, so devoid of true contemplation, that it can be seamlessly performed by a vacuum cleaner. The robot is not mimicking us; it is revealing that we have become robotic. In reducing the profound act of witnessing art to a routine automated event, the piece asks: Is our digital identity a proof of life, or merely a programmed loop of data validation?
+  The robots were given bodies but no instructions on how to use them. They were given sight but no definition of beauty. What emerges is not programmed-it is *discovered*. The dance exists nowhere in the code; it exists only in the space between two machines reaching toward each other.
+
+  The work asks: at what point does complex response become genuine expression? If a machine can perceive, interpret, and respond with what reads as intention-with what functions as longing-does the distinction between simulation and experience still hold meaning?
+
+  With only ten arm movements and two hand states, infinite poems emerge. These robots, wordless, perform the question we ask ourselves: are we the authors of our gestures, or merely their witnesses?
 thumbnail:
   type: video
   src: /videos/robots.mp4

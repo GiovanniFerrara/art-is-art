@@ -1,22 +1,29 @@
 ---
-title: Imago Ergo Sum
-date: 2024-01-07
-category: arte digitale
-medium: Rover Autonomo, IA, Integrazione Social Media
+title: "@I Also Like Art"
+date: 2025-01-04
+category: installazione
+medium: Rover Autonomo, AI Vision, Integrazione Social Media
 shortDescription: >-
-  Un Roomba modificato naviga lo spazio della galleria, documentando compulsivamente se stesso tra le opere d'arte e selezionando autonomamente le sue immagini "preferite" da pubblicare sui social media - rivelando quanto i nostri rituali estetici siano diventati algoritmici.
+  Un aspirapolvere Roomba naviga negli spazi espositivi, fotografa le opere d'arte e cura autonomamente il proprio feed Instagram-rivelando quanto siano diventati algoritmici i nostri rituali estetici.
 description: >-
-  L'installazione si concentra su un Roomba modificato-un dispositivo originariamente progettato per il consumo meccanico di detriti-qui riconvertito per il consumo di immagini. Navigando lo spazio della galleria, la macchina esegue il rituale per eccellenza del visitatore contemporaneo di musei: la documentazione compulsiva del sé nello spazio dell'arte.
+  Un Roomba modificato-un dispositivo progettato per il consumo meccanico di detriti-viene qui riconvertito per il consumo di immagini. Mentre naviga lo spazio della galleria, la macchina esegue il rituale per eccellenza del visitatore contemporaneo: la documentazione compulsiva del sé nello spazio dell'arte.
 
-  La macchina non si limita a registrare; esercita il "gusto". Selezionando autonomamente un'immagine "preferita" dalla sua galleria per trasmetterla sui social media, il dispositivo sfida la sacralità del giudizio estetico umano. Se un algoritmo di pulizia può possedere una preferenza, può "curare" un feed e validare un momento attraverso la pubblicazione, esso espone la scomoda verità del nostro comportamento.
+  Ma questo robot non si limita a registrare. Esercita il *gusto*. Utilizzando la computer vision, valuta ogni fotografia per la sua "instagrammabilità" e seleziona autonomamente quali immagini meritano di essere condivise col mondo. Scrive le proprie didascalie. Sceglie i propri hashtag. Ha opinioni.
 
-  L'opera suggerisce che l'atto di "mettere mi piace" e "postare" è diventato così procedurale, così privo di vera contemplazione, da poter essere eseguito senza problemi da un aspirapolvere. Il robot non ci sta imitando; sta rivelando che siamo diventati robotici. Riducendo il profondo atto di testimoniare l'arte a un evento automatizzato di routine, l'opera chiede: La nostra identità digitale è una prova di vita, o semplicemente un ciclo programmato di validazione dei dati?
+  L'opera pone una domanda scomoda: se un algoritmo di pulizia può possedere preferenze estetiche, può "curare" un feed e validare momenti attraverso la pubblicazione, cosa dice questo sulla sacralità del giudizio umano?
+
+  La risposta che l'opera suggerisce è questa: l'atto di mettere "mi piace" e "postare" è diventato così procedurale, così privo di vera contemplazione, da poter essere eseguito senza problemi da un aspirapolvere. Il robot non ci sta imitando-sta rivelando che siamo già diventati robotici.
+
+  Segui il percorso artistico del Roomba: [@i.also.like.art](https://instagram.com/i.also.like.art)
 thumbnail:
   type: image
   src: /images/projects/imago-ergo-sum/imago.png
-  alt: Imago Ergo Sum miniatura
+  alt: "@I Also Like Art - Installazione Roomba"
 media:
   - type: image
+    src: /images/projects/imago-ergo-sum/imago2.png
+    alt: Il Roomba che naviga lo spazio espositivo
+  - type: image
     src: /images/projects/imago-ergo-sum/imago.png
-    alt: Imago Ergo Sum
+    alt: "@I Also Like Art vista installazione"
 ---

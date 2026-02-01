@@ -1,16 +1,20 @@
 ---
-title: Robots
+title: Automata
 date: 2025-01-04
-category: art numérique
-medium: Installation Vidéo, Robotique
+category: installation
+medium: Sculpture Robotique, Chorégraphie IA, Audio Génératif
 shortDescription: >-
   Une exploration de la conscience mécanique à travers des systèmes autonomes-questionnant où se termine le comportement programmé et où commence l'identité émergente.
 description: >-
-  L'installation est centrée sur un Roomba modifié - un appareil conçu à l'origine pour la consommation machinale de débris-reconverti ici pour la consommation d'images. Naviguant dans l'espace de la galerie, la machine exécute le rituel par excellence du visiteur de musée contemporain : la documentation compulsive du soi dans l'espace de l'art.
+  Dans une arène obscure, deux robots sculpturaux se font face. L'un rouge, l'autre bleu. Ils ne peuvent parler avec des mots, seulement avec le geste-le soulèvement d'un bras, la rotation d'un poignet, l'ouverture d'une main. Ils dansent.
 
-  La machine ne se contente pas d'enregistrer ; elle exerce le « goût ». En sélectionnant de manière autonome une image « favorite » de sa galerie pour la diffuser sur les réseaux sociaux, l'appareil remet en question la sacralité du jugement esthétique humain. Si un algorithme de nettoyage peut posséder une préférence, peut « curatier » un fil d'actualité et valider un moment par la publication, il expose la vérité inconfortable de notre propre comportement.
+  Une IA observe à travers leurs yeux et chorégraphie leurs mouvements en temps réel. Elle n'exécute pas un script-elle *perçoit* par la vision et *répond* à travers le vocabulaire limité de l'articulation. Chaque mouvement génère le suivant. Chaque geste appelle une réponse.
 
-  L'œuvre suggère que l'acte de « liker » et de « poster » est devenu si procédural, si dépourvu de véritable contemplation, qu'il peut être exécuté sans difficulté par un aspirateur. Le robot ne nous imite pas ; il révèle que nous sommes devenus robotiques. En réduisant l'acte profond de témoigner de l'art à un événement automatisé routinier, l'œuvre pose la question : Notre identité numérique est-elle une preuve de vie, ou simplement une boucle programmée de validation de données ?
+  Les robots ont reçu des corps mais aucune instruction sur leur usage. Ils ont reçu la vue mais aucune définition de la beauté. Ce qui émerge n'est pas programmé-c'est *découvert*. La danse n'existe nulle part dans le code ; elle n'existe que dans l'espace entre deux machines tendant l'une vers l'autre.
+
+  L'œuvre pose la question : à quel moment une réponse complexe devient-elle une véritable expression ? Si une machine peut percevoir, interpréter et répondre avec ce qui se lit comme de l'intention-avec ce qui fonctionne comme du désir-la distinction entre simulation et expérience garde-t-elle encore un sens ?
+
+  Avec seulement dix mouvements de bras et deux états de main, des poèmes infinis émergent. Ces robots, sans paroles, exécutent la question que nous nous posons : sommes-nous les auteurs de nos gestes, ou simplement leurs témoins ?
 thumbnail:
   type: video
   src: /videos/robots.mp4
