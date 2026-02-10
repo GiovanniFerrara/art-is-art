@@ -34,6 +34,10 @@
     if (project.shortDescription && project.description) return true;
     return (project.description?.length ?? 0) > MAX_SHORT_LENGTH;
   }
+
+  function renderText(text: string): string {
+    return text.replace(/\*([^*]+)\*/g, '<strong>$1</strong>');
+  }
 </script>
 
 <div class="home">
@@ -74,9 +78,9 @@
 
         <div class="description-container">
           {#if isDescriptionExpanded}
-            <p class="description">{selectedProject.description}</p>
+            <p class="description">{@html renderText(selectedProject.description ?? '')}</p>
           {:else}
-            <p class="description">{getShortDescription(selectedProject)}</p>
+            <p class="description">{@html renderText(getShortDescription(selectedProject))}</p>
           {/if}
 
           {#if hasLongDescription(selectedProject)}
@@ -94,8 +98,7 @@
   .home {
     display: flex;
     flex-direction: column;
-    height: calc(100vh - 8rem);
-    min-height: 500px;
+    min-height: calc(100vh - 8rem);
   }
 
   .viewer {
@@ -112,8 +115,8 @@
     flex-direction: column;
     padding: 1.5rem;
     border-top: 1px solid var(--card-bg);
-    max-height: 40vh;
-    overflow-y: auto;
+    max-height: none;
+    overflow-y: visible;
   }
 
   .project-list {
@@ -239,6 +242,8 @@
   @media (min-width: 769px) {
     .home {
       flex-direction: row;
+      height: calc(100vh - 8rem);
+      min-height: 500px;
     }
 
     .viewer {

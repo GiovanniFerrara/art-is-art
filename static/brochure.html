@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@I Also Like Art</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap');
+
+        @page {
+            size: A4;
+            margin: 1.2cm;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Space Mono', monospace;
+            background: #fff;
+            color: #000;
+            padding: 1.5rem;
+            max-width: 100%;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 1.2rem;
+            padding-bottom: 0.8rem;
+            border-bottom: 1px solid #000;
+        }
+
+        .title {
+            font-size: 2.2rem;
+            font-weight: 700;
+            margin-bottom: 0.3rem;
+            letter-spacing: -0.02em;
+        }
+
+        .subtitle {
+            font-size: 0.8rem;
+            color: #666;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+        }
+
+        .columns {
+            display: flex;
+            gap: 2rem;
+            margin-bottom: 1.2rem;
+        }
+
+        .column {
+            flex: 1;
+        }
+
+        .lang-label {
+            font-size: 0.75rem;
+            color: #999;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            margin-bottom: 0.6rem;
+        }
+
+        .description {
+            font-size: 0.85rem;
+            line-height: 1.6;
+        }
+
+        .description p {
+            margin-bottom: 0.7rem;
+        }
+
+        .instagram-link {
+            display: inline-block;
+            font-size: 0.8rem;
+            color: #000;
+            text-decoration: none;
+            border: 1px solid #000;
+            padding: 0.4rem 0.8rem;
+            margin-top: 0.6rem;
+        }
+
+        .bio-section {
+            border-top: 1px solid #ddd;
+            padding-top: 1.2rem;
+        }
+
+        .bio-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 0.8rem;
+        }
+
+        .bio-name {
+            font-size: 1rem;
+            font-weight: 700;
+            letter-spacing: 0.05em;
+        }
+
+        .bio-columns {
+            margin-bottom: 0.8rem;
+        }
+
+        .bio-tagline {
+            font-size: 0.75rem;
+            color: #666;
+            margin-bottom: 0.5rem;
+        }
+
+        .bio-text {
+            font-size: 0.8rem;
+            line-height: 1.55;
+        }
+
+        .bio-links {
+            font-size: 0.75rem;
+            text-align: center;
+        }
+
+        .bio-links a {
+            color: #000;
+            text-decoration: none;
+            border-bottom: 1px solid #000;
+        }
+
+        .separator {
+            color: #999;
+            margin: 0 0.3rem;
+        }
+
+        .qr-code {
+            width: 50px;
+            height: 50px;
+        }
+
+        @media print {
+            body {
+                padding: 0;
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <h1 class="title">@I Also Like Art</h1>
+        <p class="subtitle">Autonomous Rover / AI / Social Media</p>
+    </header>
+
+    <main>
+        <section class="columns">
+            <div class="column">
+                <p class="lang-label">English</p>
+                <div class="description">
+                    <p>A modified Roomba—designed for consuming debris—repurposed for consuming images. It navigates the gallery performing the ritual of the contemporary museum visitor: compulsive documentation of the self within the space of art.</p>
+
+                    <p>But this robot exercises <em>taste</em>. It evaluates photographs for "instagrammability," selects which deserve sharing, writes its own captions, chooses its own hashtags. It has opinions.</p>
+
+                    <p>If a cleaning algorithm can curate a feed and validate moments through publication, what does that say about human judgment? The robot isn't mimicking us—it's revealing we've already become robotic.</p>
+                </div>
+                <a href="https://instagram.com/i.also.like.art" class="instagram-link" target="_blank">@i.also.like.art</a>
+            </div>
+
+            <div class="column">
+                <p class="lang-label">Français</p>
+                <div class="description">
+                    <p>Un Roomba modifié—conçu pour consommer des débris—reconverti pour consommer des images. Il navigue dans la galerie, exécutant le rituel du visiteur de musée contemporain : la documentation compulsive du soi dans l'espace de l'art.</p>
+
+                    <p>Mais ce robot exerce le <em>goût</em>. Il évalue les photos pour leur « instagrammabilité », sélectionne celles qui méritent d'être partagées, écrit ses propres légendes, choisit ses hashtags. Il a des opinions.</p>
+
+                    <p>Si un algorithme de nettoyage peut curatier un feed et valider des moments par la publication, qu'est-ce que cela dit du jugement humain ? Le robot ne nous imite pas—il révèle que nous sommes déjà robotiques.</p>
+                </div>
+                <a href="https://instagram.com/i.also.like.art" class="instagram-link" target="_blank">@i.also.like.art</a>
+            </div>
+        </section>
+
+        <section class="bio-section">
+            <div class="bio-header">
+                <h2 class="bio-name">GIAN MARCO FERRARA</h2>
+                <img src="https://api.qrserver.com/v1/create-qr-code/?size=80x80&data=https://gmferrara.net" alt="QR Code" class="qr-code" />
+            </div>
+            <div class="columns bio-columns">
+                <div class="column">
+                    <p class="bio-tagline">AI engineer, artist and farmer born in Sicily in 1989.</p>
+                    <p class="bio-text">He builds machines that have opinions, systems that develop taste, robots that dance. Sometimes he also grows tomatoes. In engineering, noise is the enemy. In art, noise is the message. He builds systems designed to behave according to their true dark machine nature.</p>
+                </div>
+                <div class="column">
+                    <p class="bio-tagline">Ingénieur IA, artiste et agriculteur né en Sicile en 1989.</p>
+                    <p class="bio-text">Il construit des machines qui ont des opinions, des systèmes qui développent du goût, des robots qui dansent. Parfois il cultive aussi des tomates. En ingénierie, le bruit est l'ennemi. En art, le bruit est le message. Il construit des systèmes conçus pour se comporter selon leur vraie nature obscure de machines.</p>
+                </div>
+            </div>
+            <p class="bio-links">
+                <a href="https://instagram.com/granciro" target="_blank">instagram.com/granciro</a>
+                <span class="separator">·</span>
+                <a href="https://gmferrara.net" target="_blank">gmferrara.net</a>
+            </p>
+        </section>
+    </main>
+</body>
+</html>

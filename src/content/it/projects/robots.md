@@ -1,8 +1,8 @@
 ---
 title: Automata
-date: 2025-01-04
+date: 2025-01-03
 category: installazione
-medium: Scultura Robotica, Coreografia IA, Audio Generativo
+medium: Scultura Robotica, Coreografia IA
 shortDescription: >-
   Un'esplorazione della coscienza meccanica attraverso sistemi autonomi-interrogando dove finisce il comportamento programmato e dove inizia l'identità emergente.
 description: >-
