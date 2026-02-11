@@ -2,7 +2,7 @@
 title: Automata
 date: 2025-01-03
 category: installation
-medium: Robotic Sculpture, AI Choreography, Generative Audio
+medium: Digital Performance
 shortDescription: >-
   An exploration of mechanical consciousness through autonomous systems-questioning where programmed behavior ends and emergent identity begins.
 description: >-
