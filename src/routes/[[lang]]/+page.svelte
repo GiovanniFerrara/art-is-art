@@ -9,7 +9,7 @@
   // Derived: get the current project from data.projects based on slug
   // This ensures the project updates when language changes
   let selectedProject: Project = $derived(
-    data.projects.find((p) => p.slug === selectedSlug) ?? data.projects[0]
+    data.projects.find((p) => p.slug === selectedSlug) ?? data.projects[0],
   );
 
   const MAX_SHORT_LENGTH = 300;
@@ -25,9 +25,10 @@
 
   function getShortDescription(project: Project): string {
     if (project.shortDescription) return project.shortDescription;
-    if (!project.description) return '';
-    if (project.description.length <= MAX_SHORT_LENGTH) return project.description;
-    return project.description.slice(0, MAX_SHORT_LENGTH).trim() + '...';
+    if (!project.description) return "";
+    if (project.description.length <= MAX_SHORT_LENGTH)
+      return project.description;
+    return project.description.slice(0, MAX_SHORT_LENGTH).trim() + "...";
   }
 
   function hasLongDescription(project: Project): boolean {
@@ -36,14 +37,17 @@
   }
 
   function renderText(text: string): string {
-    return text.replace(/\*([^*]+)\*/g, '<strong>$1</strong>');
+    return text.replace(/\*([^*]+)\*/g, "<strong>$1</strong>");
   }
 </script>
 
 <div class="home">
   <main class="viewer">
     {#key selectedProject.slug}
-      <MediaSlider media={selectedProject.media} title={selectedProject.title} />
+      <MediaSlider
+        media={selectedProject.media}
+        title={selectedProject.title}
+      />
     {/key}
   </main>
 
@@ -66,7 +70,9 @@
         <div class="project-meta">
           <span class="meta-item">
             <span class="meta-label">Year</span>
-            <span class="meta-value">{new Date(selectedProject.date).getFullYear()}</span>
+            <span class="meta-value"
+              >{new Date(selectedProject.date).getFullYear()}</span
+            >
           </span>
           {#if selectedProject.medium}
             <span class="meta-item">
@@ -78,14 +84,18 @@
 
         <div class="description-container">
           {#if isDescriptionExpanded}
-            <p class="description">{@html renderText(selectedProject.description ?? '')}</p>
+            <p class="description">
+              {@html renderText(selectedProject.description ?? "")}
+            </p>
           {:else}
-            <p class="description">{@html renderText(getShortDescription(selectedProject))}</p>
+            <p class="description">
+              {@html renderText(getShortDescription(selectedProject))}
+            </p>
           {/if}
 
           {#if hasLongDescription(selectedProject)}
             <button class="read-more" onclick={toggleDescription}>
-              {isDescriptionExpanded ? '- Read Less' : '+ Read Full Statement'}
+              {isDescriptionExpanded ? "- Read Less" : "+ Read Full Statement"}
             </button>
           {/if}
         </div>
@@ -102,9 +112,8 @@
   }
 
   .viewer {
-    flex: 1;
     min-width: 0;
-    min-height: 50vh;
+    height: 45vh;
     padding: 0 1.5rem;
   }
 
@@ -127,6 +136,12 @@
     margin-bottom: 1rem;
   }
 
+  @media (max-width: 768px) {
+    .project-list {
+      justify-content: space-between;
+    }
+  }
+
   .project-item {
     display: flex;
     flex-direction: column;
@@ -134,7 +149,6 @@
     padding: 0.5rem 0;
     background: none;
     border: none;
-    cursor: none;
     text-align: left;
     transition: opacity 0.2s ease;
   }
@@ -230,7 +244,7 @@
     font-size: 0.75rem;
     letter-spacing: 0.1em;
     padding: 0.75rem 0 0;
-    cursor: none;
+
     text-align: left;
     transition: color 0.2s ease;
   }
@@ -248,6 +262,8 @@
 
     .viewer {
       order: 1;
+      flex: 1;
+      height: auto;
       min-height: auto;
       padding: 0 2rem;
     }

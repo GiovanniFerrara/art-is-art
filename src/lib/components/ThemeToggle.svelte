@@ -51,7 +51,6 @@
 		border: none;
 		background: transparent;
 		color: var(--text-muted);
-		cursor: none;
 		padding: 0.5rem;
 		border-radius: 50%;
 		display: flex;

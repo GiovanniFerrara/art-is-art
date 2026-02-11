@@ -17,7 +17,13 @@ html {
 html,
 body {
 	height: 100%;
-	cursor: none;
+}
+
+@media (hover: hover) {
+	html,
+	body {
+		cursor: none;
+	}
 }
 
 body {

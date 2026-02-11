@@ -393,4 +393,10 @@
   .cursor-dot.visible {
     opacity: 0.85;
   }
+
+  @media (hover: none) {
+    .cursor-dot {
+      display: none;
+    }
+  }
 </style>

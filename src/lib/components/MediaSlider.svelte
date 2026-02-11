@@ -221,7 +221,7 @@
     background: rgba(0, 0, 0, 0.4);
     backdrop-filter: blur(8px);
     color: rgba(255, 255, 255, 0.9);
-    cursor: none;
+
     display: flex;
     align-items: center;
     justify-content: center;
@@ -265,7 +265,7 @@
     border: none;
     background: transparent;
     color: var(--text-muted);
-    cursor: none;
+
     display: flex;
     align-items: center;
     justify-content: center;
@@ -306,7 +306,7 @@
     border: none;
     background: var(--text-muted);
     opacity: 0.4;
-    cursor: none;
+
     transition: opacity 0.2s ease;
   }
 
