@@ -1,6 +1,6 @@
 ---
 title: The BOX
-date: 2025-01-04
+date: 2025-01-03
 category: installation
 medium: Brain-Computer Interface
 shortDescription: >-

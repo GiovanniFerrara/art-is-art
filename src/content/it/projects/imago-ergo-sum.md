@@ -1,6 +1,6 @@
 ---
 title: "@I Also Like Art"
-date: 2025-01-04
+date: 2025-01-05
 category: installazione
 medium: Rover Autonomo, AI Vision, Integrazione Social Media
 shortDescription: >-
@@ -17,13 +17,48 @@ description: >-
   Segui il percorso artistico del Roomba: [@i.also.like.art](https://instagram.com/i.also.like.art)
 thumbnail:
   type: image
-  src: /images/projects/imago-ergo-sum/imago.png
-  alt: "@I Also Like Art - Installazione Roomba"
+  src: /images/projects/imago-ergo-sum/marcello/CR6_7198.jpg
+  alt: "@I Also Like Art installazione"
 media:
+  - type: video
+    src: /videos/grand-palais-expo.mp4
+    alt: "Grand Palais Paris - Documentazione dell'esposizione"
   - type: image
-    src: /images/projects/imago-ergo-sum/imago2.png
-    alt: Il Roomba che naviga lo spazio espositivo
+    src: /images/projects/imago-ergo-sum/marcello/CR6_7198.jpg
+    alt: "@I Also Like Art"
   - type: image
-    src: /images/projects/imago-ergo-sum/imago.png
-    alt: "@I Also Like Art vista installazione"
+    src: /images/projects/imago-ergo-sum/marcello/CR6_7206.jpg
+    alt: "@I Also Like Art"
+  - type: image
+    src: /images/projects/imago-ergo-sum/marcello/CR6_7219.jpg
+    alt: "@I Also Like Art"
+  - type: image
+    src: /images/projects/imago-ergo-sum/marcello/CR6_7253.jpg
+    alt: "@I Also Like Art"
+  - type: image
+    src: /images/projects/imago-ergo-sum/marcello/CR6_7273.jpg
+    alt: "@I Also Like Art"
+  - type: image
+    src: /images/projects/imago-ergo-sum/marcello/CR6_7286.jpg
+    alt: "@I Also Like Art"
+  - type: image
+    src: /images/projects/imago-ergo-sum/marcello/CR6_7299.jpg
+    alt: "@I Also Like Art"
+  - type: image
+    src: /images/projects/imago-ergo-sum/marcello/CR6_7329.jpg
+    alt: "@I Also Like Art"
+  - type: image
+    src: /images/projects/imago-ergo-sum/marcello/CR6_7371.jpg
+    alt: "@I Also Like Art"
+  - type: image
+    src: /images/projects/imago-ergo-sum/marcello/CR6_7382.jpg
+    alt: "@I Also Like Art"
+  - type: image
+    src: /images/projects/imago-ergo-sum/marcello/CR6_7410.jpg
+    alt: "@I Also Like Art"
+  - type: image
+    src: /images/projects/imago-ergo-sum/marcello/CR6_7485.jpg
+    alt: "@I Also Like Art"
+
+
 ---

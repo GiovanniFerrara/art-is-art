@@ -1,6 +1,6 @@
 ---
 title: Automata
-date: 2025-01-03
+date: 2025-01-02
 category: installazione
 medium: Digital Performance
 shortDescription: >-
